@@ -1,8 +1,10 @@
 const express = require('express');
-const app = express();
+const ejs=require('ejs');
 const path=require('path');
+const app = express();
 
-
+//TEMPLATE ENGINE
+app.set("view engine","ejs");
 //MIDDLEWARES
 
 app.use(express.static('public'));
@@ -10,7 +12,8 @@ app.use(express.static('public'));
 
 
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname,'template/index.html'))
+  //res.sendFile(path.resolve(__dirname,'template/index.html'));
+  res.render('index')
 });
 
 const port = 3000;
