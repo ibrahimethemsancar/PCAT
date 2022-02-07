@@ -4,6 +4,7 @@ const path=require('path');
 const app = express();
 const Photo=require('./models/Photo')
 const mongoose = require('mongoose');
+const { findById } = require('./models/Photo');
 
 
 //connect DB
@@ -26,6 +27,15 @@ app.get('/', async (req, res) => {
   res.render('index',{
     photos
   })
+});
+
+app.get('/photos/:id', async(req, res) => {
+    const singlePhoto=await Photo.findById(req.params.id)
+    res.render('photo',{
+      singlePhoto
+    })
+  //console.log(req.params.id);
+  //res.render('about')
 });
 
 app.get('/about', (req, res) => {
