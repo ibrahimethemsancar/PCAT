@@ -26,6 +26,7 @@
 						<div class="col-xl-8 col-lg-7">
 							<!-- Video description -->
 							<div class="tm-video-description-box">
+								<img src="<%= singlePhoto.image %>" alt="image" />
 								<h2 class="mb-5 tm-video-title"><%= singlePhoto.title %></h2>
 								<p class="mb-4"><%= singlePhoto.description %></p>
 							
@@ -42,10 +43,9 @@
 									<a href="" class="tm-bg-white tm-share-button"><i class="far fa-envelope"></i></a>
 								</div>
 								<p class="mb-4">Author: <a href="https://templatemo.com" class="tm-text-link">TemplateMo</a></p>
-								<a href="#" class="tm-bg-white px-5 mb-4 d-inline-block tm-text-primary tm-likes-box tm-liked">
-									<i class="fas fa-heart mr-3 tm-liked-icon"></i>
-									<i class="far fa-heart mr-3 tm-not-liked-icon"></i>
-									<span id="tm-likes-count">486 likes</span>
+								<a href="/photos/edit/<%= singlePhoto._id %>" class="tm-bg-white px-5 mb-4 d-inline-block tm-text-primary tm-likes-box tm-liked">
+									
+									    Edit
 								</a>
 								<div>
 									<button class="btn btn-primary p-0 tm-btn-animate tm-btn-download tm-icon-download"><span>Download Video</span></button>	
