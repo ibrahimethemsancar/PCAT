@@ -48,7 +48,8 @@
 									    Edit
 								</a>
 								<div>
-									<button class="btn btn-primary p-0 tm-btn-animate tm-btn-download tm-icon-download"><span>Download Video</span></button>	
+									<a href="/photos/<%= singlePhoto._id %>/?_method=DELETE" class="btn btn-danger p-0 tm-btn-animate tm-btn-download tm-icon-delete"
+									onclick="return confirm('Are you sure?')"><span>Delete</span></a href="">	
 								</div>								
 							</div>
 						</div>
