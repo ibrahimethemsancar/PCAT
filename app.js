@@ -7,8 +7,8 @@ const app = express();
 const Photo = require('./models/Photo');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
-const photoController=require('./controllers/photoController')
-const pageController=require('./controllers/pageController')
+const photoController = require('./controllers/photoController');
+const pageController = require('./controllers/pageController');
 //connect DB
 mongoose.connect('mongodb://localhost/pcat-test-db', {
   useNewUrlParser: true,
@@ -36,13 +36,9 @@ app.post('/photos', photoController.createPhoto);
 app.put('/photos/:id', photoController.updatePhoto);
 app.delete('/photos/:id', photoController.deletePhoto);
 
-app.get('/about',pageController.getAboutPage );
-app.get('/add',pageController.getAddPage);
+app.get('/about', pageController.getAboutPage);
+app.get('/add', pageController.getAddPage);
 app.get('/photos/edit/:id', pageController.getEditPage);
-
-
-
-
 
 const port = 3000;
 
